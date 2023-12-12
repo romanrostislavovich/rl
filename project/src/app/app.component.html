@@ -1,0 +1,35 @@
+<header></header>
+<main>
+  <div class="about">
+    <div class="title">
+      О себе
+    </div>
+    <div class="description">
+      <p class="description-title">Front-End разработчик с 5-летним опытом в международных компаниях (EPAM, Godel Techonologies, Innowise) работаю с JavaScript | TypeScript | Angular | React | Html | CSS | SCSS </p>
+      <p>В настоящее время я работаю Front-End разработчиком (более 5 лет коммерческой разработки в крупных международных компаниях и суммарно 7 лет опыта в ИТ индустрии), я также регулярно занимаюсь улучшаю свои навыки и с радостью поделюсь своим накопленным опытом и знаниями!</p>
+    </div>
+  </div>
+  <div class="services">
+    <div class="filters">
+      <ul>
+        <li [class]="{ 'active': activeTab === 'individual' }" (click)="changeTab('individual')">Для физ. лиц</li>
+        <li [class]="{ 'active': activeTab === 'company' }" (click)="changeTab('company')">Для юр. лиц</li>
+        <li [class]="{ 'active': activeTab === 'group' }" (click)="changeTab('group')">Для групп</li>
+      </ul>
+    </div>
+    <div class="items">
+      <div class="item" *ngFor="let item of activeList">
+        <div>
+          <div class="title">{{ item.title }}</div>
+          <div class="description"></div>
+        </div>
+        <div class="buttons">
+          Подробнее
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+
+</footer>
