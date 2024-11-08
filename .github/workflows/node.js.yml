@@ -16,7 +16,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./fe
+        working-directory: ./project
 
     steps:
 
@@ -39,55 +39,4 @@ jobs:
         server: ${{ secrets.FE_GIT_CPANEL_SERVER }}
         username: ${{ secrets.FE_GIT_CPANEL_USER }}
         password: ${{ secrets.FE_GIT_CPANEL_PWD }}
-        local-dir: ./fe/dist/green-glass/
-
-  be-deplay:
-    name: 🎉 Deploy BE
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./be
-    steps:
-
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v3
-
-      - name: Use Node.js 18
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.16.1'
-
-      - name: 🔨 Build Project
-        run: |
-          npm install
-          npm run build
-
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.BE_GIT_CPANEL_SERVER }}
-          username: ${{ secrets.BE_GIT_CPANEL_USER }}
-          password: ${{ secrets.BE_GIT_CPANEL_PWD }}
-          local-dir: ./be/
-
-  telegram:
-    name: 🎉 Telegram notify
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-
-    steps:
-      - name: send telegram message on push
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: |
-            ${{ github.actor }} created commit:
-            Commit message: ${{ github.event.commits[0].message }}
-
-            Repository: ${{ github.repository }}
-
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+        local-dir: ./project/dist/
