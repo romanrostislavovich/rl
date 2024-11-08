@@ -1,0 +1,12 @@
+<div class="header ">
+  <div class="container">
+    <div class="header-translation">
+      <div class="lang"
+           *ngFor="let lang of service.languageList()"
+           [ngClass]="{ active: lang === translate.currentLang }"
+           (click)="onChangeLang(lang)">
+        {{ lang }}
+      </div>
+    </div>
+  </div>
+</div>

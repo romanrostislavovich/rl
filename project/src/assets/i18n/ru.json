@@ -1,0 +1,14 @@
+{
+  "links.website": "Мой сайт",
+  "links.name": "Роман Лавринюк",
+  "links.description": "Разработчик & Ментор & Начинающий психолог",
+  "links.services": "Услуги",
+  "links.links": "Ссылки",
+  "services.psychologist.title": "Психологии",
+  "services.psychologist.message": "Привет, интересуют твои услуги по психологии",
+  "services.mentor.title": "Менторству",
+  "services.mentor.message": "Привет, интересуют твои услуги по менторству",
+  "services.programming.title": "Разработке",
+  "services.programming.message": "Привет, интересуют твои услуги по разработке"
+}
+

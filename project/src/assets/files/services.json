@@ -1,0 +1,124 @@
+{
+  "education": {
+    "inProgress": false,
+    "items": [
+      {
+        "title": "Менторство / Репетиторство",
+        "inProgress": false
+      },
+      {
+        "title": "Обучение по индивидуальной программе",
+        "inProgress": false
+      },
+      {
+        "title": "Помощь при прохождении курсов / bootcamps",
+        "inProgress": false
+      },
+      {
+        "title": "Подготовка к собесу",
+        "inProgress": false
+      },
+      {
+        "title": "Разовые консультации",
+        "inProgress": true
+      },
+      {
+        "title": "Помощь по переквалификации с QA to FE",
+        "inProgress": true
+      }
+    ]
+  },
+  "projects": {
+    "inProgress": false,
+    "items": [
+      {
+        "title": "Менторство / Репетиторство",
+        "inProgress": false
+      }
+    ]
+  },
+  "individual": {
+    "inProgress": false,
+    "items": [
+      {
+        "title": "Менторство / Репетиторство",
+        "inProgress": false
+      },
+      {
+        "title": "Обучение по индивидуальной программе",
+        "inProgress": false
+      },
+      {
+        "title": "Помощь в сопровождение курсов",
+        "inProgress": false
+      },
+      {
+        "title": "Подготовка к собесу",
+        "inProgress": false
+      },
+      {
+        "title": "Разовые консультации из за проблем",
+        "inProgress": true
+      },
+      {
+        "title": "Помощь по переквалификации с QA to FE",
+        "inProgress": true
+      }
+    ]
+  },
+  "company": {
+    "inProgress": true,
+    "items": [
+      {
+        "title": "Проект под ключ FE",
+        "inProgress": true
+      },
+      {
+        "title": "Проект под ключ FE + BE",
+        "inProgress": true
+      },
+      {
+        "title": "Оптимизация портала",
+        "inProgress": true
+      },
+      {
+        "title": "Аудит портала",
+        "inProgress": true
+      }
+    ]
+  },
+  "group": {
+    "inProgress": true,
+    "items": [
+      {
+        "title": "Групповые занятия по HTML",
+        "inProgress": true
+      },
+      {
+        "title": "Групповые занятия по CSS + SCSS",
+        "inProgress": true
+      },
+      {
+        "title": "Групповые занятия по JavaScript",
+        "inProgress": true
+      },
+      {
+        "title": "Групповые занятия по Angular",
+        "inProgress": true
+      }
+    ]
+  },
+  "volunteering": {
+    "inProgress": false,
+    "items": [
+      {
+        "title": "Индивидуальные занятия",
+        "inProgress": false
+      },
+      {
+        "title": "Групповые занятия",
+        "inProgress": false
+      }
+    ]
+  }
+}

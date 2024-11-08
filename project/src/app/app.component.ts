@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {ServicesService} from "./services/services.service";
+import {ServiceItem, Services, ServiceSingle, ServicesService} from "./services/services.service";
+import {Tab} from "./enums/tab";
+import {MatDialog} from "@angular/material/dialog";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
@@ -8,24 +11,20 @@ import {ServicesService} from "./services/services.service";
 })
 export class AppComponent implements OnInit {
   title = 'rl';
-  list = {};
+  list: Services = {};
 
-  activeTab = 'individual';
+  activeList?: ServiceSingle = {}
+  servicesTabs = Tab;
+  activeServiceTab: Tab = Tab.volunteering;
   constructor(
-    private services: ServicesService
+    private dialog: MatDialog,
+    private translate: TranslateService,
+    private services: ServicesService,
   ) {
   }
 
   ngOnInit(): void {
-    this.list = this.services.list();
+    this.translate.use(ServicesService.defaultLang);
   }
 
-  changeTab(name: string): void {
-    this.activeTab = name;
-  }
-
-  get activeList(): any[] {
-    // @ts-ignore
-    return this.list[this.activeTab];
-  }
 }

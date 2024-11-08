@@ -1,0 +1,14 @@
+{
+  "links.website": "My website",
+  "links.name": "Roman Lauryniuk",
+  "links.description": "Developer & Mentor & Начинающий психолог",
+  "links.services": "Services",
+  "links.links": "Links",
+  "services.psychologist.title": "Psychology",
+  "services.psychologist.message": "Hi, I'm interested in your psychology services.",
+  "services.mentor.title": "Mentoring",
+  "services.mentor.message": "Hi, I'm interested in your mentoring services.",
+  "services.programming.title": "Development",
+  "services.programming.message": "Hi, I'm interested in your development services."
+}
+

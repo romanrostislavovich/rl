@@ -1,0 +1,41 @@
+<div class="home">
+  <div class="about">
+    <h1 class="about_title">
+      О себе
+    </h1>
+    <div class="about_description">
+      <p class="about_description-title">Front-End разработчик с 5-летним опытом в международных компаниях (EPAM, Godel Techonologies, Innowise) работаю с JavaScript | TypeScript | Angular | React | Html | CSS | SCSS </p>
+      <p>В настоящее время я работаю Front-End разработчиком (более 5 лет коммерческой разработки в крупных международных компаниях и суммарно 7 лет опыта в ИТ индустрии), я также регулярно занимаюсь улучшаю свои навыки и с радостью поделюсь своим накопленным опытом и знаниями!</p>
+    </div>
+  </div>
+  <div class="services">
+    <h2 class="services-title">
+      Услуги
+    </h2>
+    <div class="services-filters">
+      <ul>
+        <li [class]="{ 'active': activeServiceTab === servicesTabs.individual }" (click)="changeTab(servicesTabs.individual)">Для физ. лиц.</li>
+        <li [class]="{ 'active': activeServiceTab === servicesTabs.company }" (click)="changeTab(servicesTabs.company)">Для юр. лиц.</li>
+        <li [class]="{ 'active': activeServiceTab === servicesTabs.group }" (click)="changeTab(servicesTabs.group)">Для групп</li>
+        <li [class]="{ 'active': activeServiceTab === servicesTabs.volunteering }" (click)="changeTab(servicesTabs.volunteering)">Волонтерство</li>
+      </ul>
+    </div>
+    <div class="services-items">
+      <div class="services-items_todo" *ngIf="activeList?.inProgress">
+        TODO
+      </div>
+      <ng-container  *ngIf="!activeList?.inProgress">
+        <div class="services-items_item" *ngFor="let item of activeList?.items">
+          <div>
+            <div class="services-items_item-title">
+           <!--   <app-checkbox [name]="item.title"></app-checkbox>-->
+              {{ item.title }}
+            </div>
+            <div class="services-items_item-description"></div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+  </div>
+</div>

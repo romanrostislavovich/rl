@@ -1,0 +1,40 @@
+<div class="links">
+  <div class="links-content">
+    <div class="me">
+      <div class="photo">
+        <img src="./assets/img/photo.jpg" alt="">
+      </div>
+      <p class="name">
+        {{ 'links.name' | translate }}
+      </p>
+      <p class="description">
+        {{ 'links.description' | translate }}
+      </p>
+
+    </div>
+
+    <div class="link">
+      <a [routerLink]="'/links'">{{ 'links.links' | translate }}</a>
+    </div>
+    <div class="title">
+      <p>
+        {{ 'links.services' | translate | uppercase }}
+      </p>
+    </div>
+    <div class="link">
+      <a href="https://t.me/romanrostislavovich?text={{ 'services.psychologist.message' | translate}}" target="_blank">
+        {{ 'services.psychologist.title' | translate }}
+      </a>
+    </div>
+    <div class="link">
+      <a href="https://t.me/romanrostislavovich?text={{ 'services.mentor.message' | translate}}" target="_blank">
+        {{ 'services.mentor.title' | translate }}
+      </a>
+    </div>
+    <div class="link">
+      <a href="https://t.me/romanrostislavovich?text={{ 'services.programming.message' | translate}}" target="_blank">
+        {{ 'services.programming.title' | translate }}
+      </a>
+    </div>
+  </div>
+</div>

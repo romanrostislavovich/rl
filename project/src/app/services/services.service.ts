@@ -1,89 +1,42 @@
 import { Injectable } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
+export class Services {
+  individual?: ServiceSingle;
+  company?: ServiceSingle;
+  group?: ServiceSingle;
+  volunteering?: ServiceSingle;
+}
+export class ServiceSingle {
+  inProgress?: boolean;
+  items?: ServiceItem[]
+}
+export class ServiceItem {
+  title?: string;
+  inProgress?: boolean;
+}
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient,
+  ) { }
 
-  list(): {} {
-    return {
-        "individual": [
-          {
-            "title": "Менторство"
-          },
-          {
-            "title": "Репетиторство"
-          },
-          {
-            "title": "Помощь при прохождении курсов"
-          },
-          {
-            "title": "Подтянуть пробелы в текущих знаниях"
-          },
-          {
-            "title": "Обучение по индивидуальной программе"
-          },
-          {
-            "title": "Подготовка к собесу"
-          },
-          {
-            "title": "Помощь в изучении новых технологий в FE"
-          },
-          {
-            "title": "Разовые консультации из за проблем"
-          },
-          {
-            "title": "Хочешь запилить что-то своё но не знаешь как и т.д."
-          },
-          {
-            "title": "Программа для тех кто хочет начать быстрее работать / фриланс (без высокой материи) сокращённый вариант"
-          },
-          {
-            "title": "Обучение HTML | CSS | SCSS"
-          },
-          {
-            "title": "JS | TypeScript"
-          },
-          {
-            "title": "Angular "
-          },
-          {
-            "title": "Помощь по переквалификации с QA to FE"
-          },
-          {
-            "title": "Как устроенны процессы в больших компаниях"
-          }
-        ],
-        "company": [
-          {
-            "title": "Оптимизация портала"
-          },
-          {
-            "title": "Аудит портала"
-          },
-          {
-            "title": "Разработка портала"
-          },
-          {
-            "title": "Менеджмент команды"
-          }
-        ],
-        "group": [
-          {
-            "title": "Групповые занятия по HTML"
-          },
-          {
-            "title": "Групповые занятия по CSS + SCSS"
-          },
-          {
-            "title": "Групповые занятия по JavaScript"
-          },
-          {
-            "title": "Групповые занятия по Angular"
-          }
-        ]
-      }
+  list(): Observable<Services> {
+    return this.http.get('./assets/files/services.json');
+  }
+
+  static get defaultLang(): string {
+    return 'ua';
+  }
+  languageList(): string[] {
+    return [
+      'ua',
+      'en',
+      'ru',
+    ]
   }
 }

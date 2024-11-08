@@ -1,0 +1,60 @@
+
+.links-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+
+  & .link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 400px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #252525;
+
+    &:hover {
+      background-color: rgba(37, 37, 37, 0.9);
+    }
+  }
+}
+
+.me {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.me .name {
+  font-size: 24px;
+  font-weight: bold;
+}
+.me .description {
+  font-size: 12px;
+}
+.me .photo {
+  margin-bottom: 20px;
+}
+.me .photo img {
+  max-width: 150px;
+  border-radius: 50%;
+}
+.title {
+  font-size: 16px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+.title  p {
+  margin: 0;
+  padding: 0;
+}

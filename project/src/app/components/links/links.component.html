@@ -1,0 +1,32 @@
+<div class="links">
+  <div class="links-content">
+    <div class="me">
+      <div class="photo">
+        <img src="./assets/img/photo.jpg" alt="">
+      </div>
+      <p class="name">
+        {{ 'links.name' | translate }}
+      </p>
+      <p class="description">
+        {{ 'links.description' | translate }}
+      </p>
+    </div>
+    <div class="link" *ngIf="false">
+      <a [routerLink]="'/'">{{ 'links.website' | translate }}</a>
+    </div>
+    <div class="link">
+      <a  [routerLink]="'/services'">{{ 'links.services' | translate }}</a>
+    </div>
+    <div class="link">
+      <a href="https://github.com/romanrostislavovich/" target="_blank">github</a>
+    </div>
+    <div class="link">
+      <a href="https://www.linkedin.com/in/roman-rostislavovich/" target="_blank">linkedin</a>
+    </div>
+    <div class="link">
+      <a href="https://t.me/romanrostislavovich" target="_blank">telegram</a>
+    </div>
+  </div>
+
+
+</div>
